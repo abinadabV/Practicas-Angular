@@ -1,7 +1,7 @@
-<mat-drawer-container class="w-100-p example-container">
+<mat-drawer-container class="w-100-p example-container toolbar">
   <mat-drawer class="w-100-p" #drawer mode="side" opened>
 
-    <mat-toolbar class="toolbar" color="primary">
+    <mat-toolbar color="primary">
       <mat-toolbar-row>
         <span>{{ title }}</span>
         <span class="example-spacer"></span>
@@ -13,17 +13,20 @@
 
     <ul>
       <li>
-        <h2><a rel="noopener" routerLink="/home" >Inicio</a></h2>
+        <h3><a rel="noopener" routerLink="/home" >Inicio</a></h3>
       </li>
       <li>
-        <h2><a rel="noopener" routerLink="/practices-forms" >Formularios</a></h2>
+        <h3><a rel="noopener" routerLink="/pipes" >Pipes</a></h3>
+      </li>
+      <li>
+        <h3><a rel="noopener" routerLink="/practices-forms" >Formularios</a></h3>
       </li>
     </ul>
   </mat-drawer>
 
-  <mat-drawer-content>
+  <mat-drawer-content >
 
-    <mat-toolbar class="toolbar" color="primary">
+    <mat-toolbar color="primary">
 
       <mat-toolbar-row>
         <button *ngIf="showFiller" mat-icon-button color="accent" (click)="showFiller = !showFiller; drawer.toggle()">
@@ -31,8 +34,12 @@
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
+
+    <div class="m-16">
+
+      <router-outlet ></router-outlet>
+    </div>
     
-    <router-outlet></router-outlet>
 
   </mat-drawer-content>
 
