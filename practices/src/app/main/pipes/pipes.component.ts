@@ -7,6 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
+  users : any[] = [
+    {
+      name: 'Pedro',
+      gender: 'H'
+    },
+    {
+      name: 'Laura',
+      gender: 'M'
+    },
+  ]
+
+
+  mapping = {
+    'H': 'Bienvenido',
+    'M': 'Bienvenida'
+  }
+
   constructor() { }
 
   ngOnInit() {

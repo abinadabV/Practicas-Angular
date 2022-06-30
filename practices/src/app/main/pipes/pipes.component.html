@@ -1,3 +1,11 @@
-<p>
-  pipes works!
-</p>
+<div id="pipes">
+
+  <mat-card>
+    <mat-card-title>I18nSelectPipe</mat-card-title>
+    <mat-card-subtitle>Selector genérico que muestra la cadena que coincide con el valor actual.</mat-card-subtitle>
+    <mat-card-content>
+      <p *ngFor="let item of users">Hola {{ item.name }} sea {{ item.gender | i18nSelect:mapping }}</p>
+    </mat-card-content>
+  </mat-card>
+
+</div>
