@@ -1,10 +1,43 @@
 <div id="pipes">
 
-  <mat-card>
+  <mat-card class="card">
     <mat-card-title>I18nSelectPipe</mat-card-title>
     <mat-card-subtitle>Selector genérico que muestra la cadena que coincide con el valor actual.</mat-card-subtitle>
     <mat-card-content>
-      <p *ngFor="let item of users">Hola {{ item.name }} sea {{ item.gender | i18nSelect:mapping }}</p>
+      <p *ngFor="let item of users">Hola {{ item.name }} sea {{ item.gender | i18nSelect:mappingUsers }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-title>I18nPluralPipe</mat-card-title>
+    <mat-card-subtitle>Asigna un valor a una cadena que pluraliza el valor de acuerdo con las reglas locales.</mat-card-subtitle>
+    <mat-card-content>
+      <p >Usted {{ items0.length | i18nPlural:mappingItems }} en su carrito.</p>
+      <p >Usted {{ items1.length | i18nPlural:mappingItems }} en su carrito.</p>
+      <p >Usted {{ items2.length | i18nPlural:mappingItems }} en su carrito.</p>
+      <p >Usted {{ items3.length | i18nPlural:mappingItems }} en su carrito.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-title>KeyValuePipe</mat-card-title>
+    <mat-card-subtitle>Transforma Object o Map en una matriz de pares de valores clave.</mat-card-subtitle>
+    <mat-card-content>
+      <div *ngFor="let valueKey of employee | keyvalue">
+        <li> {{valueKey.key | titlecase}} - {{valueKey.value}}</li>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-title>KeyValuePipe</mat-card-title>
+    <mat-card-subtitle>Transforma Object o Map en una matriz de pares de valores clave.</mat-card-subtitle>
+    <mat-card-content>
+      <div *ngFor="let valueKey of employee | keyvalue">
+        <li> {{valueKey.key | titlecase}} - {{valueKey.value}}</li>
+
+      </div>
     </mat-card-content>
   </mat-card>
 
