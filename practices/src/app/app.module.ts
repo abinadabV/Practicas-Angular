@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routes/app-routes.module';
 import { PipesComponent } from './main/pipes/pipes.component';
+import { MomemtJsComponent } from './main/momentJS/momemt-js/momemt-js.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PipesComponent } from './main/pipes/pipes.component';
     PracticesFormsComponent,
     HomeComponent,
     PipesComponent,
+    MomemtJsComponent,
   ],
   imports: [
     BrowserModule,

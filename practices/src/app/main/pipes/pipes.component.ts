@@ -68,7 +68,7 @@ export class PipesComponent implements OnInit {
   }
 
 
-  observableNumber = interval(100);
+  observableNumber = interval(1000);
 
   constructor() { }
 

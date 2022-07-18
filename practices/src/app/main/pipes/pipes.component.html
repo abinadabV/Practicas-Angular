@@ -31,13 +31,10 @@
   </mat-card>
 
   <mat-card class="card">
-    <mat-card-title>KeyValuePipe</mat-card-title>
-    <mat-card-subtitle>Transforma Object o Map en una matriz de pares de valores clave.</mat-card-subtitle>
+    <mat-card-title>AsyncPipe</mat-card-title>
+    <mat-card-subtitle>Desenvuelve un valor de una primitiva asíncrona.</mat-card-subtitle>
     <mat-card-content>
-      <div *ngFor="let valueKey of employee | keyvalue">
-        <li> {{valueKey.key | titlecase}} - {{valueKey.value}}</li>
-
-      </div>
+      <li>Este es un observable: {{observableNumber | async}}</li>
     </mat-card-content>
   </mat-card>
 
